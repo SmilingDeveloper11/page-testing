@@ -1,34 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Login Required</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Prompt Test</title>
 </head>
 <body>
 
-<div id="overlay">
-  <div class="popup">
-    <h2>Authentication Required</h2>
-    <p>Please enter your username and password</p>
+<script>
+  const username = prompt("Enter username:");
+  const password = prompt("Enter password:");
 
-    <input type="text" id="username" placeholder="Username">
-    <input type="password" id="password" placeholder="Password">
+  if (username === "admin" && password === "1234") {
+    alert("Welcome!");
+  } else {
+    alert("Wrong credentials.");
+  }
+</script>
 
-    <div class="buttons">
-      <button onclick="login()">Sign in</button>
-      <button onclick="cancel()">Cancel</button>
-    </div>
-
-    <p id="error"></p>
-  </div>
-</div>
-
-<div id="content">
-  <h1>Welcome!</h1>
-  <p>You are logged in.</p>
-</div>
-
-<script src="script.js"></script>
 </body>
 </html>
